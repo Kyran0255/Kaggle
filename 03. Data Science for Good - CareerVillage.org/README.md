@@ -4,7 +4,7 @@
 
 ----------------
 
-### 가설
+### Hypothesis
 
 - 전문가 데이터(professionals.csv) professionals의 answers 로 professionals의 industry와 headline을 예측할 수 있다
 
