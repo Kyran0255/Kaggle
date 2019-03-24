@@ -10,12 +10,14 @@
 
 ###  Work Flow
 
-1. professionals의 industry와 headline 데이터를 나름의 카테고리로 전처리한다.
-2. Answer의 Text를 **TF-idf(문장 내에 단어 가중치를 준다) & tokenizing**(Reference 찾아보기로) → 하여 Answer의 명사만 뽑는다.
-3. Answer의 author_id와 professinals_id를 mapping 해주고, 2번에서 전처리한 Answer의 Text를 Input data, 1번에서 전처리한 professionals의 카테고리를 target으로 하여 예측모델을 만든다.
-4. 예측 모델로 professionals의 industry와 headline의 NA 값을 예측한다. (NA 값 처리 →  Softmax(Classifier))
-5. Questions + tags(정규표현식으로 전처리)를 조합(어떻게 조합할지도 고민)하여 questions의 Text를 TF-idf(문장 내에 단어 가중치를 준다) & tokenizing 하여 키워드를 추출한다.
-6. 추출된 키워드가 input, professionals의 industry와 headline이 target 값으로 하여 분류기를 만든다. (어떤 모델일지는 더 고민)
+1. professionals의 industry와 headline 데이터를 나름의 카테고리로 전처리한다. **(2)**
+2. Answer의 Text를 **TF-idf(문장 내에 단어 가중치를 준다) & tokenizing**(Reference 찾아보기로) → 하여 Answer의 명사만 뽑는다. **(3)**
+3. Answer의 author_id와 professinals_id를 mapping 해주고, 2번에서 전처리한 Answer의 Text를 Input data, 1번에서 전처리한 professionals의 카테고리를 target으로 하여 예측모델을 만든다. **(4)**
+4. 예측 모델로 professionals의 industry와 headline의 NA 값을 예측한다. (NA 값 처리 →  Softmax(Classifier)) **(5)**
+5. Questions + tags(정규표현식으로 전처리)를 조합(어떻게 조합할지도 고민)하여 questions의 Text를 TF-idf(문장 내에 단어 가중치를 준다) & tokenizing 하여 키워드를 추출한다. **(6)**
+6. 추출된 키워드가 input, professionals의 industry와 headline이 target 값으로 하여 분류기를 만든다. (어떤 모델일지는 더 고민) **(7)**
+
+-------------
 
 ### Expected Result
 
@@ -25,9 +27,11 @@
 
 
 
+--------
+
 ### 해결해야 할 문제
 
-- 여러개의 answer중에 적절한 answer는? → 1대1인 것만 뽑아서 해보자.
+- 여러개의 answer중에 적절한 answer는? → 1대1인 것만 뽑아서 해보자. **(1)**
 
 
 
